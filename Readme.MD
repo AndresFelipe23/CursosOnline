@@ -43,4 +43,4 @@ El proyecto está dividido en dos principales aplicaciones:
 Clona el repositorio con el siguiente comando:
 
 ```bash
-git clone https://github.com/tuusuario/ProyectoCursosOnline.git
+git clone https://github.com/AndresFelipe23/CursosOnline.git
