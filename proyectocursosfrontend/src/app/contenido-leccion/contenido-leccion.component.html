@@ -1,0 +1,54 @@
+<!-- lesson.component.html -->
+<div class="min-h-screen bg-gray-50">
+  <div *ngIf="leccion">
+    <!-- Componente del encabezado de la lección -->
+    <app-lesson-header [lecTitulo]="leccion.lecTitulo" [etapaId]="leccion.etapaId"></app-lesson-header>
+
+    <!-- Contenido de la lección -->
+    <div class="container mx-auto px-4 max-w-3xl">
+      <div class="bg-white rounded-xl shadow-lg p-6 my-8">
+        <!-- Ícono de la lección -->
+        <div class="flex justify-center mb-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Contenido -->
+        <div class="prose max-w-full text-gray-800 text-lg text-justify leading-relaxed">
+          <p>{{ leccion.lecContenido }}</p>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="mt-8">
+          <div class="flex justify-between text-sm text-gray-500 mb-2">
+            <span>Lección {{leccionId}} de {{totalLessons}}</span>
+            <span>{{(leccionId/totalLessons * 100).toFixed(0)}}%</span>
+          </div>
+          <div class="h-2 bg-gray-100 rounded-full">
+            <div class="h-full bg-green-500 rounded-full transition-all duration-300"
+                 [style.width.%]="(leccionId/totalLessons * 100)"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Componente de botones de navegación -->
+      <app-navigation-buttons
+        [leccionId]="leccionId"
+        [totalLessons]="totalLessons">
+      </app-navigation-buttons>
+    </div>
+  </div>
+
+  <!-- Mensaje de error mejorado -->
+  <div *ngIf="!leccion" class="container mx-auto px-4 py-8 text-center">
+    <div class="bg-red-50 border border-red-200 rounded-lg p-6 inline-block">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-red-400 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <p class="text-red-600 font-medium">No se pudo cargar el contenido de la lección.</p>
+    </div>
+  </div>
+</div>

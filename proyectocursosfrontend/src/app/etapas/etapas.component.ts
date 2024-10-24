@@ -9,7 +9,6 @@ import { Etapa } from '../shared/data-access/etapa.service';
   standalone: true,
   selector: 'app-etapas',
   templateUrl: './etapas.component.html',
-  styleUrls: ['./etapas.component.css'],
   imports: [CommonModule, RouterModule], // Incluye RouterModule
 })
 export class EtapasComponent implements OnInit {

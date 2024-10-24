@@ -1,0 +1,22 @@
+<!-- navigation-buttons.component.html -->
+<div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t p-4">
+  <div class="max-w-3xl mx-auto flex justify-between gap-4">
+    <button *ngIf="leccionId > 2"
+            (click)="irAtras()"
+            class="flex-1 py-3 px-6 bg-gray-200 text-gray-700 rounded-xl hover:bg-gray-300 transition-colors duration-200 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Atrás
+    </button>
+
+    <button (click)="irSiguiente()"
+            [disabled]="leccionId >= totalLessons"
+            class="flex-1 py-3 px-6 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+      Continuar
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>

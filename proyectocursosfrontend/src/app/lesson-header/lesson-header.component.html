@@ -1,0 +1,41 @@
+<div class="fixed top-0 left-0 right-0 z-50">
+  <!-- Barra de progreso -->
+
+  <!-- Header con contenido -->
+  <div class="flex justify-between items-center p-4 bg-white shadow-md">
+    <!-- Botón de retroceso -->
+    <button (click)="cerrarContenido()"
+            class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition-colors duration-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Información central -->
+    <div class="flex flex-col items-center">
+      <h2 class="text-lg font-bold text-gray-800">{{ lecTitulo }}</h2>
+      <!-- Corazones/Vidas -->
+      <div class="flex space-x-1 mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Botón de opciones -->
+    <button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition-colors duration-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- Espaciador para el contenido debajo del header fijo -->
+<div class="h-24"></div>

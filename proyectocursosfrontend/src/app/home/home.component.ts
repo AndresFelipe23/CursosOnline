@@ -8,7 +8,6 @@ import { RouterModule } from '@angular/router'; // Importa RouterModule para usa
   standalone: true,
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
   imports: [CommonModule, NavbarComponent, RouterModule] // Asegúrate de incluir RouterModule para routerLink
 })
 export class HomeComponent implements OnInit {

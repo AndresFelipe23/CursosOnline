@@ -30,6 +30,11 @@ export const routes: Routes = [
     canActivateChild: [privateGuard()],
   },
   {
+    path: 'contenido/:leccionId',
+    loadComponent: () => import('./contenido-leccion/contenido-leccion.component').then(m => m.ContenidoLeccionComponent),
+    canActivateChild: [privateGuard()],
+  },
+  {
     path: '**',
     redirectTo: '/home',
   },

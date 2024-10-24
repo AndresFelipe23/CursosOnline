@@ -1,0 +1,90 @@
+<!-- Header principal con gradiente y efectos -->
+<div class="sticky top-0 z-50">
+  <div class="flex justify-between items-center p-4 bg-gradient-to-r from-green-400 to-emerald-500 shadow-md">
+    <!-- Sección izquierda con título y progreso -->
+    <div class="flex items-center space-x-4">
+      <button (click)="irAEtapas()"
+              class="p-2 rounded-full hover:bg-white/20 transition-colors duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6 text-white"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor">
+          <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <div class="flex flex-col">
+        <h1 class="text-2xl font-bold text-white">Lecciones</h1>
+        <div class="flex items-center space-x-2">
+          <div class="w-32 h-2 bg-white/30 rounded-full">
+            <div class="w-1/2 h-full bg-white rounded-full"></div>
+          </div>
+          <span class="text-sm text-white">50%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección derecha con stats -->
+    <div class="flex items-center space-x-6">
+      <!-- Racha diaria -->
+      <div class="flex items-center space-x-2">
+        <div class="p-2 bg-white/20 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="h-5 w-5 text-white"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+        <span class="text-white font-bold">7 días</span>
+      </div>
+
+      <!-- Puntos/Gemas -->
+      <div class="flex items-center space-x-2">
+        <div class="p-2 bg-white/20 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="h-5 w-5 text-yellow-300"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <span class="text-white font-bold">1,234</span>
+      </div>
+
+      <!-- Corazones/Vidas -->
+      <div class="flex items-center space-x-2">
+        <div class="p-2 bg-white/20 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               class="h-5 w-5 text-red-500"
+               fill="none"
+               viewBox="0 0 24 24"
+               stroke="currentColor">
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </div>
+        <span class="text-white font-bold">5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra de progreso animada -->
+  <div class="h-1 bg-white/20">
+    <div class="h-full w-1/2 bg-yellow-400 animate-pulse"></div>
+  </div>
+</div>
